@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bcom3_000.homework_5.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="6"
+        android:id="@+id/latitudeP1"
+        android:hint="latitude P1"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/clearButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:layout_marginTop="15dp"
+        android:id="@+id/latitudeP2"
+        android:hint="latitude P2"
+        android:layout_below="@+id/latitudeP1"
+        android:layout_alignStart="@+id/latitudeP1"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="6"
+        android:id="@+id/longitudeP1"
+        android:hint="longitude P1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned|numberDecimal"
+        android:ems="6"
+        android:id="@+id/longitudeP2"
+        android:hint="longitutude P2"
+        android:layout_alignBaseline="@+id/latitudeP2"
+        android:layout_alignBottom="@+id/latitudeP2"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="23dp"
+        android:id="@+id/clearButton"
+        android:layout_below="@+id/latitudeP2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculateButton"
+        android:layout_alignBaseline="@+id/clearButton"
+        android:layout_alignBottom="@+id/clearButton"
+        android:layout_alignStart="@+id/longitudeP2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Distance:"
+        android:ems="10"
+        android:layout_below="@+id/clearButton"
+        android:layout_marginTop="34dp"
+        android:id="@+id/distanceField"
+        android:layout_alignEnd="@+id/calculateButton"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Bearing:"
+        android:ems="10"
+        android:layout_below="@+id/distanceField"
+        android:layout_alignEnd="@+id/distanceField"
+        android:layout_marginTop="19dp"
+        android:id="@+id/bearingField"
+        android:layout_alignStart="@+id/distanceField" />
+</RelativeLayout>
